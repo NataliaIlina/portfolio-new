@@ -1,0 +1,16 @@
+import styled from 'styled-components';
+
+export const SLayout = styled.div`
+  width: 100%;
+  padding: 0 16px;
+
+  ${(props) => props.theme.media.up('sm')} {
+    padding: 0 32px;
+  }
+
+  ${(props) => props.theme.media.up('md')} {
+    max-width: 1230px;
+    padding: 0 48px;
+    margin: 0 auto;
+  }
+`;
