@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Text from '@/components/Text/Text';
+import { decoration } from '@/styled/common';
 
 export const SSocialLink = styled(Text.link)`
   position: relative;
@@ -8,14 +9,10 @@ export const SSocialLink = styled(Text.link)`
   text-transform: inherit;
 
   &::after {
-    content: '';
-    position: absolute;
+    ${decoration};
+
     bottom: 0;
     left: 0;
-    width: 70px;
-    height: 3px;
-    background-color: #fff;
-    transition: all 0.3s;
   }
 
   &:hover::after {

@@ -23,6 +23,10 @@ declare module 'styled-components' {
       default: string;
       secondary: string;
     };
+    boxShadow: {
+      white: string;
+      brown: string;
+    };
     space: number[];
   }
 }

@@ -1,4 +1,5 @@
 import type { TBreakpoint } from 'styled-components';
+import { rgba } from 'polished';
 
 export const breakpoints = {
   xs: 0,
@@ -10,6 +11,8 @@ export const breakpoints = {
 export const common = {
   white: '#ffffff',
   black: '#000000',
+  brown: '#736c4e',
+  yellow: '#dab50b',
 };
 
 const theme = {
@@ -23,8 +26,8 @@ const theme = {
   colors: {
     common,
     text: {
-      primary: '#dab50b',
-      secondary: '#736c4e',
+      primary: common.yellow,
+      secondary: common.brown,
     },
     background: {
       default: common.black,
@@ -33,6 +36,10 @@ const theme = {
   fontFamily: {
     default: 'Verdana',
     secondary: 'Georgia',
+  },
+  boxShadow: {
+    white: `0 0 19.2px 4.8px ${rgba(common.white, 0.45)}`,
+    brown: `0 0 19.2px 4.8px ${rgba(common.brown, 0.45)}`,
   },
   space: [],
 };

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
-import Text from '@/components/Text/Text';
+import { verticalDecoration } from '@/styled/common';
 
 export const SFooter = styled.footer`
   display: flex;
@@ -13,14 +12,11 @@ export const SNav = styled.div`
   position: relative;
 
   &::before {
-    content: '';
-    position: absolute;
-    width: 3px;
-    height: 70px;
+    ${verticalDecoration};
+
     top: 50%;
     left: -30px;
     transform: translateY(-50%);
-    background-color: ${(props) => props.theme.colors.common.white};
   }
 `;
 
