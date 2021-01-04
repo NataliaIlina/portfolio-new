@@ -1,5 +1,5 @@
 import 'styled-components';
-import { breakpoints } from '@/styled/theme';
+import { breakpoints, common } from '@/styled/theme';
 
 declare module 'styled-components' {
   export type TBreakpoint = keyof typeof breakpoints;
@@ -10,6 +10,7 @@ declare module 'styled-components' {
       down: (value: TBreakpoint) => string;
     };
     colors: {
+      common: Record<keyof typeof common, string>;
       text: {
         primary: string;
         secondary: string;

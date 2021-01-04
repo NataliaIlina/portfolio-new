@@ -7,6 +7,11 @@ export const breakpoints = {
   lg: 1280,
 };
 
+export const common = {
+  white: '#ffffff',
+  black: '#000000',
+};
+
 const theme = {
   breakpoints,
   media: {
@@ -16,12 +21,13 @@ const theme = {
       `@media (min-width: ${breakpoints[value]}px)`,
   },
   colors: {
+    common,
     text: {
       primary: '#dab50b',
       secondary: '#736c4e',
     },
     background: {
-      default: '#000000',
+      default: common.black,
     },
   },
   fontFamily: {

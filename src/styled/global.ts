@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
   *::after {
     box-sizing: inherit;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 // 1230 внутри сетки

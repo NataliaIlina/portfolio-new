@@ -9,8 +9,9 @@ export const SLayout = styled.div`
   }
 
   ${(props) => props.theme.media.up('md')} {
-    max-width: 1230px;
+    max-width: 1330px;
     padding: 0 48px;
     margin: 0 auto;
+    outline: 1px solid pink;
   }
 `;

@@ -4,16 +4,13 @@ import GlobalStyle from '@/styled/global';
 import { ThemeProvider } from 'styled-components';
 import theme from '@/styled/theme';
 import Layout from '@/components/Layout/Layout';
+import Content from '@/components/Content/Content';
 
 const Home: React.FC<PageProps> = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
     <Layout>
-      <p>A TypeScript starter for Gatsby. Great for advanced users.</p>
-      <p>
-        Follow me on Twitter (
-        <a href="https://twitter.com/jpedroschmitz">@jpedroschmitz</a>)
-      </p>
+      <Content />
     </Layout>
   </ThemeProvider>
 );

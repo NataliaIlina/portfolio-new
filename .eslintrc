@@ -23,6 +23,9 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-props-no-spreading": "off",
     "implicit-arrow-linebreak": "off",
+    "object-property-newline": "off",
+    "object-curly-newline": "off",
+    "react/jsx-pascal-case": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
