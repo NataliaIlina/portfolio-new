@@ -1,8 +1,10 @@
 import React from 'react';
 import Button from '@/components/Button/Button';
 import Text from '@/components/Text/Text';
-import { Box } from 'reflexbox';
+import { Box, Flex } from 'reflexbox';
+import Skills from '@/components/Skills/Skills';
 import { SBlock } from './Content.styled';
+import projects from './projects.png';
 
 const Content: React.FC = () => (
   <div>
@@ -27,10 +29,15 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock>
-      <Box width={526}>
-        <Text.header2 mb={48}>Основные навыки</Text.header2>
-        <Button>Подробнее</Button>
-      </Box>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Box width={526}>
+          <Text.header2 mb={48}>Основные навыки</Text.header2>
+          <Button>Подробнее</Button>
+        </Box>
+        <Box pr={40}>
+          <Skills />
+        </Box>
+      </Flex>
     </SBlock>
 
     <SBlock>
@@ -48,10 +55,15 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock>
-      <Box width={526}>
-        <Text.header2 mb={48}>Примеры работ</Text.header2>
-        <Button>Смотреть код</Button>
-      </Box>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Box width={526}>
+          <Text.header2 mb={48}>Примеры работ</Text.header2>
+          <Button>Смотреть код</Button>
+        </Box>
+        <Box width={705} height={570}>
+          <img src={projects} alt="Примеры работ" />
+        </Box>
+      </Flex>
     </SBlock>
 
     <SBlock>

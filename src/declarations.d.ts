@@ -26,3 +26,5 @@ declare module 'styled-components' {
     space: number[];
   }
 }
+
+declare module '*.png';
