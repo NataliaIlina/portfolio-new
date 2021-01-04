@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
      min-width: 320px;
+     scroll-behavior: smooth;
   }
 
   body {

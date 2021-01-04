@@ -5,7 +5,9 @@ import { Flex } from 'reflexbox';
 import { Mail, Skype, Telegram } from '@/components/icons/contacts';
 import { Location } from '@/components/icons';
 import Text from '@/components/Text/Text';
-import { SFooter, SLink, SNav, SLocation, SContactLink } from './Footer.styled';
+import NavigationLink from '@/components/NavigationLink/NavigationLink';
+import SocialLink from '@/components/SocialLink/SocialLink';
+import { SFooter, SNav, SLocation } from './Footer.styled';
 
 const icon = {
   skype: <Skype />,
@@ -19,9 +21,9 @@ const Footer: React.FC = () => (
 
     <SNav>
       {NAV_LINKS.map(({ label, href }) => (
-        <SLink to={href} key={label}>
+        <NavigationLink href={href} key={label}>
           {label}
-        </SLink>
+        </NavigationLink>
       ))}
     </SNav>
 
@@ -32,11 +34,11 @@ const Footer: React.FC = () => (
 
     <div>
       {CONTACTS.map(({ type, value, href }) => (
-        <Flex key={type}>
+        <Flex key={type} alignItems="center">
           {icon[type]}{' '}
-          <SContactLink fontSize={12} href={href}>
+          <SocialLink fontSize={12} href={href}>
             {value}
-          </SContactLink>
+          </SocialLink>
         </Flex>
       ))}
     </div>

@@ -28,7 +28,7 @@ const Content: React.FC = () => (
       </Text.body>
     </SBlock>
 
-    <SBlock>
+    <SBlock id="skills">
       <Flex justifyContent="space-between" alignItems="center">
         <Box width={526}>
           <Text.header2 mb={48}>Основные навыки</Text.header2>
@@ -54,7 +54,7 @@ const Content: React.FC = () => (
       </Text.body>
     </SBlock>
 
-    <SBlock>
+    <SBlock id="works">
       <Flex justifyContent="space-between" alignItems="center">
         <Box width={526}>
           <Text.header2 mb={48}>Примеры работ</Text.header2>
@@ -77,7 +77,7 @@ const Content: React.FC = () => (
       </Text.body>
     </SBlock>
 
-    <SBlock>
+    <SBlock id="contacts">
       <Box width={526}>
         <Text.header2 mb={48}>Опыт работы</Text.header2>
         <Button>Написать мне</Button>

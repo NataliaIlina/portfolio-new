@@ -73,6 +73,7 @@ export const SText = styled.p.withConfig<
           text-transform: uppercase;
           letter-spacing: -0.01em;
           color: ${({ theme }) => theme.colors.text.primary};
+          display: block;
         `;
       default:
         return '';
