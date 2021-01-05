@@ -26,6 +26,7 @@
     "object-property-newline": "off",
     "object-curly-newline": "off",
     "react/jsx-pascal-case": "off",
+    "operator-linebreak": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

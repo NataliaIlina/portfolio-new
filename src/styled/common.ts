@@ -7,7 +7,7 @@ export const decoration = css`
   height: 3px;
   background-color: #fff;
   box-shadow: ${({ theme }) => theme.boxShadow.white};
-  transition: all 0.3s;
+  transition: all 0.4s ease-out;
 `;
 
 export const verticalDecoration = css`

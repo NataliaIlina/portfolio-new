@@ -7,14 +7,13 @@ import { defineStyles } from '@/components/Text/Text.utils';
 export const SText = styled.p.withConfig<
   { variant: TVariant; withTopDecor?: boolean } & TextAlignProps
 >({
-  shouldForwardProp: (prop) =>
-    !['variant', 'textAlign', 'withTopDecor'].includes(prop),
+  shouldForwardProp: (prop) => !['variant', 'textAlign', 'withTopDecor'].includes(prop),
 })`
   ${({ variant }) => defineStyles(variant)};
 
   ${({ withTopDecor }) =>
-    withTopDecor
-    && css`
+    withTopDecor &&
+    css`
       padding-top: 60px;
       position: relative;
 
@@ -25,9 +24,9 @@ export const SText = styled.p.withConfig<
         left: 50%;
         transform: translateX(-50%);
       }
-    `}
+    `};
 
-  ${fontSize}
-  ${space}
-  ${textAlign}
+  ${fontSize};
+  ${space};
+  ${textAlign};
 `;

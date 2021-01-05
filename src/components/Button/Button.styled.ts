@@ -15,7 +15,7 @@ export const SButton = styled.button`
   letter-spacing: -0.025em;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.6s ease-in-out;
 
   &:hover,
   &:focus {
