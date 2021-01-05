@@ -21,12 +21,13 @@ const Content: React.FC = () => (
     </SMainScreenBlock>
 
     <SBlock>
-      <Text.header3 textAlign="center" mb={24}>
+      <Text.header3 textAlign="center">
         “Работай с умом, а не до ночи.”
+        <SQuote textAlign="right">
+          (с) Луций Анней Сенека и позднее Стив Джобс
+        </SQuote>
       </Text.header3>
-      <SQuote textAlign="right" tag="p" mb={20}>
-        (с) Луций Анней Сенека и позднее Стив Джобс
-      </SQuote>
+
       <Text.body textAlign="center" withTopDecor>
         Для достижения цели сипользую современные подходы и прогрессивные
         технологии.
@@ -49,7 +50,7 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock>
-      <Text.header3 textAlign="center" mb={60}>
+      <Text.header3 textAlign="center">
         Работа должна быть интересной. Даже легаси код может вдохновлять
       </Text.header3>
 
@@ -81,9 +82,7 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock>
-      <Text.header3 textAlign="center" mb={60}>
-        Лучше поздно, чем никогда.
-      </Text.header3>
+      <Text.header3 textAlign="center">Лучше поздно, чем никогда.</Text.header3>
       <Text.body textAlign="center" withTopDecor>
         В какой-то момент пришло осознание, что пора менять жизнь. <br /> Выбор
         пал на программирование, из направлений приглянулся frontend. <br /> Так

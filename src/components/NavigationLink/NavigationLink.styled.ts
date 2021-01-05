@@ -12,10 +12,26 @@ export const SNavigationLink = styled(Text.link)`
     left: 0;
     width: 0;
     box-shadow: none;
+
+    ${({ theme }) => theme.media.up('sm')} {
+      width: 0;
+    }
+
+    ${({ theme }) => theme.media.up('md')} {
+      width: 0;
+    }
   }
 
   &:hover::before {
-    width: 70px;
+    width: 36px;
     box-shadow: ${({ theme }) => theme.boxShadow.white};
+
+    ${({ theme }) => theme.media.up('sm')} {
+      width: 54px;
+    }
+
+    ${({ theme }) => theme.media.up('md')} {
+      width: 70px;
+    }
   }
 `;

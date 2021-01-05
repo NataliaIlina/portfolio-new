@@ -18,8 +18,10 @@ export const common = {
 const theme = {
   breakpoints,
   media: {
-    down: (value: TBreakpoint): string => `@media (max-width: ${breakpoints[value]}px)`,
-    up: (value: TBreakpoint): string => `@media (min-width: ${breakpoints[value]}px)`,
+    down: (value: TBreakpoint): string =>
+      `@media (max-width: ${breakpoints[value]}px)`,
+    up: (value: TBreakpoint): string =>
+      `@media (min-width: ${breakpoints[value]}px)`,
   },
   colors: {
     common,
@@ -32,8 +34,9 @@ const theme = {
     },
   },
   fontFamily: {
-    default: 'Verdana',
-    secondary: 'Georgia',
+    default: 'Verdana, san-serif',
+    secondary: 'Georgia, serif',
+    title: 'Playfair Display, serif',
   },
   boxShadow: {
     white: `0 0 19.2px 4.8px ${rgba(common.white, 0.45)}`,

@@ -5,10 +5,7 @@ export const defineStyles = (variant: TVariant) => {
   switch (variant) {
     case 'body':
       return css`
-        font-family: Verdana;
         font-size: 14px;
-        line-height: 1.2;
-        font-weight: 400;
         letter-spacing: -0.075em;
         color: #736c4e;
 
@@ -22,10 +19,7 @@ export const defineStyles = (variant: TVariant) => {
       `;
     case 'caption':
       return css`
-        font-family: Verdana;
         font-size: 10px;
-        line-height: 1.2;
-        font-weight: 400;
         letter-spacing: -0.025em;
         color: #736c4e;
 
@@ -39,25 +33,26 @@ export const defineStyles = (variant: TVariant) => {
       `;
     case 'header1':
       return css`
-        font-family: PlayfairDisplay;
+        font-family: ${({ theme }) => theme.fontFamily.title};
         font-size: 36px;
-        line-height: 1.2;
+        line-height: 36px;
         font-weight: 700;
         letter-spacing: -0.01em;
         color: #dab50b;
 
         ${({ theme }) => theme.media.up('sm')} {
           font-size: 74px;
+          line-height: 74px;
         }
 
         ${({ theme }) => theme.media.up('md')} {
           font-size: 92px;
-          line-height: 1.2;
+          line-height: 92px;
         }
       `;
     case 'header2':
       return css`
-        font-family: PlayfairDisplay;
+        font-family: ${({ theme }) => theme.fontFamily.title};
         font-size: 36px;
         line-height: 48px;
         font-weight: 700;
@@ -76,25 +71,27 @@ export const defineStyles = (variant: TVariant) => {
       `;
     case 'header3':
       return css`
-        font-family: Georgia;
+        font-family: ${({ theme }) => theme.fontFamily.secondary};
         font-size: 16px;
-        line-height: 1.2;
         font-weight: 700;
         letter-spacing: -0.01em;
         color: #dab50b;
+        margin-bottom: 32px;
 
         ${({ theme }) => theme.media.up('sm')} {
           font-size: 28px;
+          margin-bottom: 48px;
         }
 
         ${({ theme }) => theme.media.up('md')} {
           font-size: 36px;
           line-height: 48px;
+          margin-bottom: 60px;
         }
       `;
     case 'subheader':
       return css`
-        font-family: Merriweather;
+        font-family: 'Merriweather', serif;
         font-size: 16px;
         line-height: 24px;
         font-weight: 700;
@@ -115,7 +112,6 @@ export const defineStyles = (variant: TVariant) => {
       return css`
         font-family: ${({ theme }) => theme.fontFamily.secondary};
         font-size: 14px;
-        line-height: 1.2;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: -0.01em;

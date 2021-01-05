@@ -22,6 +22,7 @@ declare module 'styled-components' {
     fontFamily: {
       default: string;
       secondary: string;
+      title: string;
     };
     boxShadow: {
       white: string;

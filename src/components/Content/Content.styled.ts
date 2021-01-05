@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
-import { Flex } from 'reflexbox';
 
 export const SMainScreenBlock = styled.div`
   display: flex;
@@ -36,11 +35,13 @@ export const SBlock = styled.div`
 `;
 
 export const SQuote = styled(Text.caption)`
-  margin-top: -12px;
+  position: absolute;
+  right: 0;
+  bottom: -12px;
 
   ${({ theme }) => theme.media.up('md')} {
-    margin-top: 0;
-    margin-right: 88px;
+    right: 88px;
+    bottom: -24px;
   }
 `;
 
