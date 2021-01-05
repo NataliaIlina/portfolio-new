@@ -1,41 +1,51 @@
 import React from 'react';
-import Button from '@/components/Button/Button';
 import Text from '@/components/Text/Text';
-import { Box, Flex } from 'reflexbox';
+import { Box } from 'reflexbox';
 import Skills from '@/components/Skills/Skills';
 import Works from '@/components/Works/Works';
-import { SBlock } from './Content.styled';
+import {
+  SBlock,
+  SFeature,
+  SFeatureBlock,
+  SFeatureTitle,
+  SFeatureButton,
+  SMainScreenBlock,
+  SQuote,
+} from './Content.styled';
 
 const Content: React.FC = () => (
   <div>
-    <Box mt={260} mb={400}>
+    <SMainScreenBlock>
       <Text.header1 textAlign="center">Наталья Ильина</Text.header1>
       <Text.subheader textAlign="center">Front-end разработчик</Text.subheader>
-    </Box>
+    </SMainScreenBlock>
 
     <SBlock>
       <Text.header3 textAlign="center" mb={24}>
         “Работай с умом, а не до ночи.”
       </Text.header3>
-      <Text.caption textAlign="right" tag="p" mb={20} mr={88}>
+      <SQuote textAlign="right" tag="p" mb={20}>
         (с) Луций Анней Сенека и позднее Стив Джобс
-      </Text.caption>
+      </SQuote>
       <Text.body textAlign="center" withTopDecor>
-        Для достижения цели сипользую современные подходы и прогрессивные технологии.
-        <br /> Легаси код не проблема, но писать новый код на старый лад считаю потерей времени
+        Для достижения цели сипользую современные подходы и прогрессивные
+        технологии.
+        <br /> Легаси код не проблема, но писать новый код на старый лад считаю
+        потерей времени
       </Text.body>
     </SBlock>
 
     <SBlock id="skills">
-      <Flex justifyContent="space-between" alignItems="center">
-        <Box width={526}>
-          <Text.header2 mb={48}>Основные навыки</Text.header2>
-          <Button>Подробнее</Button>
-        </Box>
-        <Box pr={40}>
-          <Skills />
-        </Box>
-      </Flex>
+      <SFeature>
+        <SFeatureBlock>
+          <SFeatureTitle>
+            Основные <br /> навыки
+          </SFeatureTitle>
+          <SFeatureButton>Подробнее</SFeatureButton>
+        </SFeatureBlock>
+
+        <Skills />
+      </SFeature>
     </SBlock>
 
     <SBlock>
@@ -46,21 +56,28 @@ const Content: React.FC = () => (
       <Text.body textAlign="center" withTopDecor>
         Конечно писать что-то с нуля намного проще, чем править старый код.
         <br />
-        Иногда даже быстрее. Но все таки для начала надо попытаться исправить то,
+        Иногда даже быстрее. Но все таки для начала надо попытаться исправить
+        то,
         <br /> что не работает, чем построить что-то заново
       </Text.body>
     </SBlock>
 
     <SBlock id="works">
-      <Flex justifyContent="space-between" alignItems="center">
-        <Box width={526}>
-          <Text.header2 mb={48}>Примеры работ</Text.header2>
-          <Button>Смотреть код</Button>
+      <SFeature>
+        <SFeatureBlock>
+          <SFeatureTitle>
+            Примеры <br /> работ
+          </SFeatureTitle>
+          <SFeatureButton>Смотреть код</SFeatureButton>
+        </SFeatureBlock>
+        <Box>
+          <picture>
+            <source srcSet="projects_mobile.png" media="(max-width: 767px)" />
+            <source srcSet="projects_tablet.png" media="(max-width: 1023px)" />
+            <img src="projects.png" alt="Примеры работ" />
+          </picture>
         </Box>
-        <Box width={705} height={570}>
-          <img src="projects.png" alt="Примеры работ" />
-        </Box>
-      </Flex>
+      </SFeature>
     </SBlock>
 
     <SBlock>
@@ -68,20 +85,22 @@ const Content: React.FC = () => (
         Лучше поздно, чем никогда.
       </Text.header3>
       <Text.body textAlign="center" withTopDecor>
-        В какой-то момент пришло осознание, что пора менять жизнь. <br /> Выбор пал на
-        программирование, из направлений приглянулся frontend. <br /> Так в 30+ я сменила профессию,
-        что считаю своим преимуществом
+        В какой-то момент пришло осознание, что пора менять жизнь. <br /> Выбор
+        пал на программирование, из направлений приглянулся frontend. <br /> Так
+        в 30+ я сменила профессию, что считаю своим преимуществом
       </Text.body>
     </SBlock>
 
     <SBlock id="contacts">
-      <Flex justifyContent="space-between">
-        <Box width={526}>
-          <Text.header2 mb={48}>Опыт работы</Text.header2>
-          <Button>Написать мне</Button>
-        </Box>
+      <SFeature style={{ alignItems: 'stretch' }}>
+        <SFeatureBlock>
+          <SFeatureTitle>
+            Опыт <br /> работы
+          </SFeatureTitle>
+          <SFeatureButton>Написать мне</SFeatureButton>
+        </SFeatureBlock>
         <Works />
-      </Flex>
+      </SFeature>
     </SBlock>
   </div>
 );

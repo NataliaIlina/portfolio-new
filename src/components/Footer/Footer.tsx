@@ -35,10 +35,7 @@ const Footer: React.FC = () => (
     <div>
       {CONTACTS.map(({ type, value, href }) => (
         <Flex key={type} alignItems="center">
-          {icon[type]}{' '}
-          <SocialLink fontSize={12} href={href}>
-            {value}
-          </SocialLink>
+          {icon[type]} <SocialLink href={href}>{value}</SocialLink>
         </Flex>
       ))}
     </div>

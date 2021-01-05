@@ -1,19 +1,39 @@
 import styled from 'styled-components';
 
 export const SSkills = styled.div`
-  width: 440px;
-  height: 440px;
-  justify-content: center;
+  width: 288px;
+  height: 288px;
   position: relative;
+
+  ${({ theme }) => theme.media.up('sm')} {
+    width: 440px;
+    height: 440px;
+  }
+
+  ${({ theme }) => theme.media.up('md')} {
+    margin-right: 40px;
+  }
 `;
 
 export const SSkillWrapper = styled.div`
-  padding-bottom: 360px;
+  padding-bottom: 208px;
   position: absolute;
   top: 0;
   left: 50%;
   margin-left: -40px;
   transform: rotate(-30deg);
+
+  svg {
+    width: 60px;
+  }
+
+  ${({ theme }) => theme.media.up('sm')} {
+    padding-bottom: 360px;
+
+    & svg {
+      width: 80px;
+    }
+  }
 
   svg {
     transform: rotate(30deg);

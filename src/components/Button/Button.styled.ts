@@ -8,7 +8,7 @@ export const SButton = styled.button`
   border: 1px solid ${({ theme }) => theme.colors.common.yellow};
   color: ${({ theme }) => theme.colors.text.primary};
   font-family: ${({ theme }) => theme.fontFamily.default};
-  font-size: 14px;
+  font-size: 10px;
   line-height: 1.2;
   font-weight: 400;
   text-transform: uppercase;
@@ -21,5 +21,9 @@ export const SButton = styled.button`
   &:focus {
     background-color: ${({ theme }) => theme.colors.common.brown};
     box-shadow: ${({ theme }) => theme.boxShadow.brown};
+  }
+
+  ${({ theme }) => theme.media.up('sm')} {
+    font-size: 14px;
   }
 `;

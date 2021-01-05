@@ -7,6 +7,7 @@ export const SSocialLink = styled(Text.link)`
   padding: 12px 0;
   margin-left: 12px;
   text-transform: inherit;
+  font-size: 10px;
 
   &::after {
     ${decoration};
@@ -17,5 +18,13 @@ export const SSocialLink = styled(Text.link)`
 
   &:hover::after {
     bottom: 9px;
+  }
+
+  ${({ theme }) => theme.media.up('sm')} {
+    font-size: 12px;
+  }
+
+  ${({ theme }) => theme.media.up('md')} {
+    font-size: 14px;
   }
 `;

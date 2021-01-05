@@ -2,23 +2,21 @@ import React from 'react';
 import Logo from '@/components/Logo/Logo';
 import { NAV_LINKS } from '@/constants';
 import SocialLink from '@/components/SocialLink/SocialLink';
-import { Flex } from 'reflexbox';
-import { SHeader, SNavLink } from './Header.styled';
+import { LINK } from '@/constants/contacts';
+import { SHeader, SNavLink, SNav } from './Header.styled';
 
 const Header: React.FC = () => (
   <SHeader>
     <Logo />
-    <nav>
-      <Flex>
-        {NAV_LINKS.map(({ label, href }) => (
-          <SNavLink href={href} key={label}>
-            {label}
-          </SNavLink>
-        ))}
-      </Flex>
-    </nav>
+    <SNav>
+      {NAV_LINKS.map(({ label, href }) => (
+        <SNavLink href={href} key={label}>
+          {label}
+        </SNavLink>
+      ))}
+    </SNav>
 
-    <SocialLink href="mailto:ilina.ns@yandex.ru">ilina.ns@yandex.ru</SocialLink>
+    <SocialLink href={LINK.mail}>ilina.ns@yandex.ru</SocialLink>
   </SHeader>
 );
 

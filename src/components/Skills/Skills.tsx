@@ -23,7 +23,12 @@ const Skills: React.FC = () => (
   <SSkills>
     {Object.keys(SKILLS).map((skill) => (
       <SSkillWrapper key={skill}>
-        <Flex width={80} height={80} justifyContent="center" alignItems="center">
+        <Flex
+          width={80}
+          height={80}
+          justifyContent="center"
+          alignItems="center"
+        >
           {SKILLS[skill]}
         </Flex>
       </SSkillWrapper>
