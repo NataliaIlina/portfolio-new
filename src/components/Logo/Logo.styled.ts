@@ -11,6 +11,7 @@ export const SLogo = styled(Link)`
 
   ${({ theme }) => theme.media.up('sm')} {
     font-size: 36px;
+    line-height: 48px;
   }
 
   ${({ theme }) => theme.media.up('md')} {

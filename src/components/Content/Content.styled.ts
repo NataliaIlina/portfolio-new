@@ -41,23 +41,36 @@ export const SQuote = styled(Text.caption)`
 
   ${({ theme }) => theme.media.up('md')} {
     right: 88px;
+    bottom: -20px;
+  }
+
+  ${({ theme }) => theme.media.up('md')} {
+    right: 88px;
     bottom: -24px;
   }
 `;
 
 export const SFeature = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
   ${({ theme }) => theme.media.up('sm')} {
   }
 
   ${({ theme }) => theme.media.up('md')} {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
   }
 `;
 
 export const SFeatureBlock = styled.div`
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   ${({ theme }) => theme.media.up('sm')} {
   }
@@ -69,6 +82,7 @@ export const SFeatureBlock = styled.div`
 
 export const SFeatureTitle = styled(Text.header2)`
   margin-bottom: 24px;
+  text-align: center;
 
   ${({ theme }) => theme.media.up('sm')} {
     margin-bottom: 32px;
@@ -76,6 +90,17 @@ export const SFeatureTitle = styled(Text.header2)`
 
   ${({ theme }) => theme.media.up('md')} {
     margin-bottom: 48px;
+    text-align: left;
+  }
+`;
+
+export const SFeatureContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${({ theme }) => theme.media.up('md')} {
+    display: block;
   }
 `;
 

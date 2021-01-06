@@ -5,11 +5,12 @@ export const SHeader = styled.header`
   padding: 12px 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: baseline;
 
   ${({ theme }) => theme.media.up('sm')} {
     padding: 16px 0;
   }
+
   ${({ theme }) => theme.media.up('md')} {
     padding: 24px 0;
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import Text from '@/components/Text/Text';
-import { Box } from 'reflexbox';
 import Skills from '@/components/Skills/Skills';
 import Works from '@/components/Works/Works';
 import {
@@ -11,6 +10,7 @@ import {
   SFeatureButton,
   SMainScreenBlock,
   SQuote,
+  SFeatureContent,
 } from './Content.styled';
 
 const Content: React.FC = () => (
@@ -45,7 +45,9 @@ const Content: React.FC = () => (
           <SFeatureButton>Подробнее</SFeatureButton>
         </SFeatureBlock>
 
-        <Skills />
+        <SFeatureContent>
+          <Skills />
+        </SFeatureContent>
       </SFeature>
     </SBlock>
 
@@ -71,13 +73,13 @@ const Content: React.FC = () => (
           </SFeatureTitle>
           <SFeatureButton>Смотреть код</SFeatureButton>
         </SFeatureBlock>
-        <Box>
+        <SFeatureContent>
           <picture>
             <source srcSet="projects_mobile.png" media="(max-width: 767px)" />
             <source srcSet="projects_tablet.png" media="(max-width: 1023px)" />
-            <img src="projects.png" alt="Примеры работ" />
+            <img src="projects_tablet.png" alt="Примеры работ" />
           </picture>
-        </Box>
+        </SFeatureContent>
       </SFeature>
     </SBlock>
 
@@ -91,14 +93,16 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock id="contacts">
-      <SFeature style={{ alignItems: 'stretch' }}>
+      <SFeature>
         <SFeatureBlock>
           <SFeatureTitle>
             Опыт <br /> работы
           </SFeatureTitle>
           <SFeatureButton>Написать мне</SFeatureButton>
         </SFeatureBlock>
-        <Works />
+        <SFeatureContent>
+          <Works />
+        </SFeatureContent>
       </SFeature>
     </SBlock>
   </div>

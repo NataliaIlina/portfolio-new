@@ -7,30 +7,26 @@ import {
   StyledIcon,
   TSIcon,
 } from '@/components/icons/skills';
-import { Flex } from 'reflexbox';
-import { SSkillWrapper, SSkills } from '@/components/Skills/Skills.styled';
+import {
+  SSkillWrapper,
+  SSkills,
+  SIconWrapper,
+} from '@/components/Skills/Skills.styled';
 
 const SKILLS = {
-  ts: <TSIcon />,
-  redux: <ReduxIcon />,
-  material: <MaterialIcon />,
   js: <JSIcon />,
   react: <ReactIcon />,
   styled: <StyledIcon />,
+  ts: <TSIcon />,
+  redux: <ReduxIcon />,
+  material: <MaterialIcon />,
 };
 
 const Skills: React.FC = () => (
   <SSkills>
     {Object.keys(SKILLS).map((skill) => (
       <SSkillWrapper key={skill}>
-        <Flex
-          width={80}
-          height={80}
-          justifyContent="center"
-          alignItems="center"
-        >
-          {SKILLS[skill]}
-        </Flex>
+        <SIconWrapper>{SKILLS[skill]}</SIconWrapper>
       </SSkillWrapper>
     ))}
   </SSkills>

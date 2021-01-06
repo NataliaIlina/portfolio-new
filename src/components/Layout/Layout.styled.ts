@@ -5,13 +5,14 @@ export const SLayout = styled.div`
   padding: 0 16px;
 
   ${(props) => props.theme.media.up('sm')} {
-    padding: 0 32px;
+    padding: 0 60px;
+    margin: 0 auto;
   }
 
   ${(props) => props.theme.media.up('md')} {
     max-width: 1330px;
     padding: 0 48px;
-    margin: 0 auto;
+
     outline: 1px solid pink;
   }
 `;
