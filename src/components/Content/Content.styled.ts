@@ -139,7 +139,7 @@ export const SBlock = styled.div<{
     padding-bottom: 180px;
 
     ${({ image, placement }) =>
-    image &&
+      image &&
       css`
         &::before {
           top: -200px;
