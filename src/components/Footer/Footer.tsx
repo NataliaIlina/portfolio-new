@@ -1,18 +1,22 @@
 import React from 'react';
 import Logo from '@/components/Logo/Logo';
-import { NAV_LINKS, CONTACTS } from '@/constants';
+import { NAV_LINKS } from '@/constants/navigation';
 import { Flex } from 'reflexbox';
 import { Mail, Skype, Telegram } from '@/components/icons/contacts';
 import { Location } from '@/components/icons';
 import Text from '@/components/Text/Text';
 import NavigationLink from '@/components/NavigationLink/NavigationLink';
 import SocialLink from '@/components/SocialLink/SocialLink';
+import { CONTACTS } from '@/constants/contacts';
+import Github from '@/components/icons/contacts/Github';
+import { common } from '@/styled/theme';
 import { SFooter, SNav, SLocation } from './Footer.styled';
 
 const icon = {
   skype: <Skype />,
   telegram: <Telegram />,
   mail: <Mail />,
+  github: <Github fill={common.brown} />,
 };
 
 const Footer: React.FC = () => (

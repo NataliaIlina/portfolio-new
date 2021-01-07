@@ -1,8 +1,10 @@
 import React from 'react';
 import Logo from '@/components/Logo/Logo';
-import { NAV_LINKS } from '@/constants';
+import { NAV_LINKS } from '@/constants/navigation';
 import SocialLink from '@/components/SocialLink/SocialLink';
 import { LINK } from '@/constants/contacts';
+import Github from '@/components/icons/contacts/Github';
+import { Flex } from 'reflexbox';
 import { SHeader, SNavLink, SNav } from './Header.styled';
 
 const Header: React.FC = () => (
@@ -16,7 +18,9 @@ const Header: React.FC = () => (
       ))}
     </SNav>
 
-    <SocialLink href={LINK.mail}>ilina.ns@yandex.ru</SocialLink>
+    <Flex alignItems="center">
+      <Github /> <SocialLink href={LINK.github}>NataliaIlina</SocialLink>
+    </Flex>
   </SHeader>
 );
 
