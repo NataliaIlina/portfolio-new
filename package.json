@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-ts",
-  "description": "A TypeScript starter for Gatsby that includes all you need to build amazing projects",
+  "name": "portfolio-new",
+  "description": "Portfolio",
   "version": "1.0.0",
   "private": true,
-  "author": "João Pedro Schmitz <oi@joaopedro.cc> (joaopedro.cc)",
+  "author": "Ilina Natalia",
   "license": "MIT",
   "keywords": [
     "gatsby",
