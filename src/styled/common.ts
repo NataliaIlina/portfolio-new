@@ -54,3 +54,13 @@ export const rotateReverse = keyframes`
     transform: rotate(-360deg);
   }
 `;
+
+export const fadeOut = keyframes`
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Text from '@/components/Text/Text';
-import Button from '@/components/Button/Button';
 import { decoration } from '@/styled/common';
 
 export const SMainScreenBlock = styled.div`
@@ -51,6 +50,7 @@ export const SMainTitle = styled(Text.header1)`
 export const SBlock = styled.div`
   padding-top: 32px;
   padding-bottom: 80px;
+  overflow: hidden;
 
   ${({ theme }) => theme.media.up('sm')} {
     padding-top: 48px;

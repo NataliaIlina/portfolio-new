@@ -7,11 +7,7 @@ import {
   StyledIcon,
   TSIcon,
 } from '@/components/icons/skills';
-import {
-  SSkillWrapper,
-  SSkills,
-  SIconWrapper,
-} from '@/components/Skills/Skills.styled';
+import { SSkillWrapper, SSkills, SIconWrapper } from '@/components/Skills/Skills.styled';
 
 const SKILLS = {
   js: <JSIcon />,

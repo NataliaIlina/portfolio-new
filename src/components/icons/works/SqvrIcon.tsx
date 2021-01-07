@@ -1,13 +1,7 @@
 import React from 'react';
 
 const SqvrIcon: React.FC = () => (
-  <svg
-    width="130"
-    height="52"
-    viewBox="0 0 130 52"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="130" height="52" viewBox="0 0 130 52" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M0 4.875V41.3427H11.3742L16.8274 46.7459L20.2651 43.3302L13.3885 36.4803H4.86236V9.73736H31.6053V36.4803H23.0962V41.3427H36.4677V4.875H0Z"
       fill="white"

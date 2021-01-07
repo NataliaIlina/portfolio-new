@@ -7,8 +7,7 @@ import { defineStyles } from '@/components/Text/Text.utils';
 export const SText = styled.p.withConfig<
   { variant: TVariant; withTopDecor?: boolean } & TextAlignProps
 >({
-  shouldForwardProp: (prop) =>
-    !['variant', 'textAlign', 'withTopDecor'].includes(prop),
+  shouldForwardProp: (prop) => !['variant', 'textAlign', 'withTopDecor'].includes(prop),
 })`
   position: relative;
   font-family: ${({ theme }) => theme.fontFamily.default};

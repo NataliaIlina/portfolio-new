@@ -3,6 +3,7 @@ import Text from '@/components/Text/Text';
 import Skills from '@/components/Skills/Skills';
 import Works from '@/components/Works/Works';
 import Feature from '@/components/Feature/Feature';
+import ContentBlock from '@/components/ContentBlock/ContentBlock';
 import { SBlock, SMainScreenBlock, SQuote, SMainTitle } from './Content.styled';
 
 const Content: React.FC = () => (
@@ -12,21 +13,20 @@ const Content: React.FC = () => (
       <Text.subheader textAlign="center">Front-end разработчик</Text.subheader>
     </SMainScreenBlock>
 
-    <SBlock>
-      <Text.header3 textAlign="center">
-        “Работай с умом, а не до ночи.”
-        <SQuote textAlign="right">
-          (с) Луций Анней Сенека и позднее Стив Джобс
-        </SQuote>
-      </Text.header3>
-
-      <Text.body textAlign="center" withTopDecor>
-        Для достижения цели сипользую современные подходы и прогрессивные
-        технологии.
-        <br /> Легаси код не проблема, но писать новый код на старый лад считаю
-        потерей времени
-      </Text.body>
-    </SBlock>
+    <ContentBlock
+      title={
+        <>
+          “Работай с умом, а не до ночи.”
+          <SQuote textAlign="right">(с) Луций Анней Сенека и позднее Стив Джобс</SQuote>
+        </>
+      }
+      description={
+        <>
+          Для достижения цели сипользую современные подходы и прогрессивные технологии.
+          <br /> Легаси код не проблема, но писать новый код на старый лад считаю потерей времени
+        </>
+      }
+    />
 
     <SBlock id="skills">
       <Feature
@@ -40,19 +40,17 @@ const Content: React.FC = () => (
       </Feature>
     </SBlock>
 
-    <SBlock>
-      <Text.header3 textAlign="center">
-        Работа должна быть интересной. Даже легаси код может вдохновлять
-      </Text.header3>
-
-      <Text.body textAlign="center" withTopDecor>
-        Конечно писать что-то с нуля намного проще, чем править старый код.
-        <br />
-        Иногда даже быстрее. Но все таки для начала надо попытаться исправить
-        то,
-        <br /> что не работает, чем построить что-то заново
-      </Text.body>
-    </SBlock>
+    <ContentBlock
+      title="Работа должна быть интересной. Даже легаси код может вдохновлять"
+      description={
+        <>
+          Конечно писать что-то с нуля намного проще, чем править старый код.
+          <br />
+          Иногда даже быстрее. Но все таки для начала надо попытаться исправить то,
+          <br /> что не работает, чем построить что-то заново
+        </>
+      }
+    />
 
     <SBlock id="works">
       <Feature
@@ -70,14 +68,16 @@ const Content: React.FC = () => (
       </Feature>
     </SBlock>
 
-    <SBlock>
-      <Text.header3 textAlign="center">Лучше поздно, чем никогда.</Text.header3>
-      <Text.body textAlign="center" withTopDecor>
-        В какой-то момент пришло осознание, что пора менять жизнь. <br /> Выбор
-        пал на программирование, из направлений приглянулся frontend. <br /> Так
-        в 30+ я сменила профессию, что считаю своим преимуществом
-      </Text.body>
-    </SBlock>
+    <ContentBlock
+      title="Лучше поздно, чем никогда."
+      description={
+        <>
+          В какой-то момент пришло осознание, что пора менять жизнь. <br /> Выбор пал на
+          программирование, из направлений приглянулся frontend. <br /> Так в 30+ я сменила
+          профессию, что считаю своим преимуществом
+        </>
+      }
+    />
 
     <SBlock id="contacts">
       <Feature
