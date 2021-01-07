@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Text from '@/components/Text/Text';
 import Button from '@/components/Button/Button';
+import { decoration } from '@/styled/common';
 
 export const SMainScreenBlock = styled.div`
   display: flex;
@@ -16,6 +17,34 @@ export const SMainScreenBlock = styled.div`
   ${({ theme }) => theme.media.up('md')} {
     height: calc(100vh - 105px);
     padding-bottom: 140px;
+  }
+`;
+
+export const SMainTitle = styled(Text.header1)`
+  margin-bottom: 32px;
+
+  &::after {
+    ${decoration};
+
+    bottom: -19px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ${({ theme }) => theme.media.up('sm')} {
+    margin-bottom: 48px;
+
+    &::after {
+      bottom: -25px;
+    }
+  }
+
+  ${({ theme }) => theme.media.up('md')} {
+    margin-bottom: 64px;
+
+    &::after {
+      bottom: -35px;
+    }
   }
 `;
 
@@ -84,6 +113,18 @@ export const SFeatureTitle = styled(Text.header2)`
   margin-bottom: 24px;
   text-align: center;
 
+  & span {
+    position: relative;
+
+    &::before {
+      ${decoration};
+
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+  }
+
   ${({ theme }) => theme.media.up('sm')} {
     margin-bottom: 32px;
   }
@@ -91,6 +132,11 @@ export const SFeatureTitle = styled(Text.header2)`
   ${({ theme }) => theme.media.up('md')} {
     margin-bottom: 48px;
     text-align: left;
+
+    & span::before {
+      left: 0;
+      transform: none;
+    }
   }
 `;
 

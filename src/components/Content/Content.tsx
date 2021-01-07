@@ -11,12 +11,13 @@ import {
   SMainScreenBlock,
   SQuote,
   SFeatureContent,
+  SMainTitle,
 } from './Content.styled';
 
 const Content: React.FC = () => (
   <div>
     <SMainScreenBlock>
-      <Text.header1 textAlign="center">Наталья Ильина</Text.header1>
+      <SMainTitle textAlign="center">Наталья Ильина</SMainTitle>
       <Text.subheader textAlign="center">Front-end разработчик</Text.subheader>
     </SMainScreenBlock>
 
@@ -40,7 +41,7 @@ const Content: React.FC = () => (
       <SFeature>
         <SFeatureBlock>
           <SFeatureTitle>
-            Основные <br /> навыки
+            <span>Основные</span> <br /> навыки
           </SFeatureTitle>
           <SFeatureButton>Подробнее</SFeatureButton>
         </SFeatureBlock>
@@ -69,7 +70,7 @@ const Content: React.FC = () => (
       <SFeature>
         <SFeatureBlock>
           <SFeatureTitle>
-            Примеры <br /> работ
+            <span>Примеры</span> <br /> работ
           </SFeatureTitle>
           <SFeatureButton>Смотреть код</SFeatureButton>
         </SFeatureBlock>
@@ -96,7 +97,7 @@ const Content: React.FC = () => (
       <SFeature>
         <SFeatureBlock>
           <SFeatureTitle>
-            Опыт <br /> работы
+            <span>Опыт</span> <br /> работы
           </SFeatureTitle>
           <SFeatureButton>Написать мне</SFeatureButton>
         </SFeatureBlock>
