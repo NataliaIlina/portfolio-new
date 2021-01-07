@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
     max-width: 100%;
     height: auto;
   }
+
+  #gatsby-focus-wrapper {
+    overflow: hidden;
+  }
 `;
 
 export default GlobalStyle;

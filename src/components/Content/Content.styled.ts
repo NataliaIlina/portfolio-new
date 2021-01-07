@@ -113,7 +113,7 @@ export const SBlock = styled.div<{
         width: 50%;
         background: url(${image}) no-repeat;
         background-position: ${placement === 'right' ? '100% 50%' : '0 50%'};
-        background-size: cover;
+        background-size: contain;
         opacity: 0.2;
       }
     `}
