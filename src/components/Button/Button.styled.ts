@@ -9,7 +9,7 @@ export const SButton = styled.button`
   color: ${({ theme }) => theme.colors.text.primary};
   font-family: ${({ theme }) => theme.fontFamily.default};
   font-size: 10px;
-  line-height: 1.2;
+  line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.025em;
@@ -25,5 +25,6 @@ export const SButton = styled.button`
 
   ${({ theme }) => theme.media.up('sm')} {
     font-size: 14px;
+    line-height: 16px;
   }
 `;

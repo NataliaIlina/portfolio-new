@@ -54,19 +54,19 @@ export const defineStyles = (variant: TVariant) => {
       return css`
         font-family: ${({ theme }) => theme.fontFamily.title};
         font-size: 36px;
-        line-height: 48px;
+        line-height: 36px;
         font-weight: 700;
         letter-spacing: 0.025em;
         color: #dab50b;
 
         ${({ theme }) => theme.media.up('sm')} {
           font-size: 75px;
-          line-height: 72px;
+          line-height: 75px;
         }
 
         ${({ theme }) => theme.media.up('md')} {
           font-size: 100px;
-          line-height: 94px;
+          line-height: 100px;
         }
       `;
     case 'header3':

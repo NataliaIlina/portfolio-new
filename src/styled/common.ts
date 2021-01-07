@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css, keyframes } from 'styled-components';
 
 export const decoration = css`
   content: '';
@@ -32,5 +32,25 @@ export const verticalDecoration = css`
 
   ${({ theme }) => theme.media.up('md')} {
     height: 70px;
+  }
+`;
+
+export const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const rotateReverse = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
   }
 `;

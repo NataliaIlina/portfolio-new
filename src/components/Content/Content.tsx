@@ -2,17 +2,8 @@ import React from 'react';
 import Text from '@/components/Text/Text';
 import Skills from '@/components/Skills/Skills';
 import Works from '@/components/Works/Works';
-import {
-  SBlock,
-  SFeature,
-  SFeatureBlock,
-  SFeatureTitle,
-  SFeatureButton,
-  SMainScreenBlock,
-  SQuote,
-  SFeatureContent,
-  SMainTitle,
-} from './Content.styled';
+import Feature from '@/components/Feature/Feature';
+import { SBlock, SMainScreenBlock, SQuote, SMainTitle } from './Content.styled';
 
 const Content: React.FC = () => (
   <div>
@@ -38,18 +29,15 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock id="skills">
-      <SFeature>
-        <SFeatureBlock>
-          <SFeatureTitle>
+      <Feature
+        title={
+          <>
             <span>Основные</span> <br /> навыки
-          </SFeatureTitle>
-          <SFeatureButton>Подробнее</SFeatureButton>
-        </SFeatureBlock>
-
-        <SFeatureContent>
-          <Skills />
-        </SFeatureContent>
-      </SFeature>
+          </>
+        }
+      >
+        <Skills />
+      </Feature>
     </SBlock>
 
     <SBlock>
@@ -67,21 +55,19 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock id="works">
-      <SFeature>
-        <SFeatureBlock>
-          <SFeatureTitle>
+      <Feature
+        title={
+          <>
             <span>Примеры</span> <br /> работ
-          </SFeatureTitle>
-          <SFeatureButton>Смотреть код</SFeatureButton>
-        </SFeatureBlock>
-        <SFeatureContent>
-          <picture>
-            <source srcSet="projects_mobile.png" media="(max-width: 767px)" />
-            <source srcSet="projects_tablet.png" media="(max-width: 1023px)" />
-            <img src="projects_tablet.png" alt="Примеры работ" />
-          </picture>
-        </SFeatureContent>
-      </SFeature>
+          </>
+        }
+      >
+        <picture>
+          <source srcSet="projects_mobile.png" media="(max-width: 767px)" />
+          <source srcSet="projects_tablet.png" media="(max-width: 1023px)" />
+          <img src="projects_tablet.png" alt="Примеры работ" />
+        </picture>
+      </Feature>
     </SBlock>
 
     <SBlock>
@@ -94,17 +80,15 @@ const Content: React.FC = () => (
     </SBlock>
 
     <SBlock id="contacts">
-      <SFeature>
-        <SFeatureBlock>
-          <SFeatureTitle>
+      <Feature
+        title={
+          <>
             <span>Опыт</span> <br /> работы
-          </SFeatureTitle>
-          <SFeatureButton>Написать мне</SFeatureButton>
-        </SFeatureBlock>
-        <SFeatureContent>
-          <Works />
-        </SFeatureContent>
-      </SFeature>
+          </>
+        }
+      >
+        <Works />
+      </Feature>
     </SBlock>
   </div>
 );

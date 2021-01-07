@@ -70,94 +70,11 @@ export const SQuote = styled(Text.caption)`
 
   ${({ theme }) => theme.media.up('md')} {
     right: 88px;
-    bottom: -20px;
+    bottom: -10px;
   }
 
   ${({ theme }) => theme.media.up('md')} {
     right: 88px;
     bottom: -24px;
-  }
-`;
-
-export const SFeature = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-  ${({ theme }) => theme.media.up('sm')} {
-  }
-
-  ${({ theme }) => theme.media.up('md')} {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
-
-export const SFeatureBlock = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-
-  ${({ theme }) => theme.media.up('sm')} {
-  }
-
-  ${({ theme }) => theme.media.up('md')} {
-    width: 526px;
-  }
-`;
-
-export const SFeatureTitle = styled(Text.header2)`
-  margin-bottom: 24px;
-  text-align: center;
-
-  & span {
-    position: relative;
-
-    &::before {
-      ${decoration};
-
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
-    }
-  }
-
-  ${({ theme }) => theme.media.up('sm')} {
-    margin-bottom: 32px;
-  }
-
-  ${({ theme }) => theme.media.up('md')} {
-    margin-bottom: 48px;
-    text-align: left;
-
-    & span::before {
-      left: 0;
-      transform: none;
-    }
-  }
-`;
-
-export const SFeatureContent = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  ${({ theme }) => theme.media.up('md')} {
-    display: block;
-  }
-`;
-
-export const SFeatureButton = styled(Button)`
-  margin-bottom: 24px;
-
-  ${({ theme }) => theme.media.up('sm')} {
-    margin-bottom: 32px;
-  }
-
-  ${({ theme }) => theme.media.up('md')} {
-    margin-bottom: 0;
   }
 `;

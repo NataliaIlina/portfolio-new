@@ -12,7 +12,5 @@ export const SLayout = styled.div`
   ${(props) => props.theme.media.up('md')} {
     max-width: 1330px;
     padding: 0 48px;
-
-    outline: 1px solid pink;
   }
 `;

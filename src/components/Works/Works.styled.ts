@@ -16,7 +16,7 @@ export const SWorks = styled.div`
   ${({ theme }) => theme.media.up('sm')} {
     width: 600px;
     padding: 32px;
-    min-height: 270px;
+    min-height: 290px;
 
     svg {
       width: 130px;

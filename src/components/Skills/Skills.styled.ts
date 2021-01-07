@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import { rotate, rotateReverse } from '@/styled/common';
 
 export const SSkills = styled.div`
   width: 220px;
   height: 220px;
   position: relative;
+  animation: ${rotate} 12s linear infinite;
 
   ${({ theme }) => theme.media.up('sm')} {
     width: 330px;
@@ -23,6 +25,7 @@ export const SIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: ${rotateReverse} 12s linear infinite;
 
   svg {
     width: 40px;
