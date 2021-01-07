@@ -10,7 +10,6 @@ script:
   - yarn build
 
 deploy:
-  project_name: 'portfolio-new'
   # Use Github pages deploy process
   provider: pages
   # Keep builded pages
