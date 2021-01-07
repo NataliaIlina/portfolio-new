@@ -1,11 +1,28 @@
 language: node_js
-before_script:
-  - npm install -g gatsby
 node_js:
-  - "10"
+  - '12'
+cache:
+  yarn: true
+  directories:
+    - public
+    - .cache
+script:
+  - yarn build # Generate static HTML files
+
+# Here is the magic part
 deploy:
-  provider: script
-  script: cd docs/ && yarn install && yarn run deploy
-  skip_cleanup: true
+  # Use Github pages deploy process
+  provider: pages
+  # Keep builded pages
+  skip-cleanup: true
+  # Directory where your generated files are located
+  local_dir: public
+  # Github security/auth token
+  github-token: $GITHUB_TOKEN
+  # Incremental commit to keep old build/files from previous deployments
+  keep-history: true
+  # Git branch on which it should deploy (master, gh-pages, foo...)
+  target_branch: gh-pages
   on:
-    branch: main
+    # Which branch on commit/push will trigger deployment
+    branch: master
