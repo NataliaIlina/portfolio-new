@@ -7,10 +7,10 @@ cache:
     - public
     - .cache
 script:
-  - yarn build # Generate static HTML files
+  - yarn build
 
-# Here is the magic part
 deploy:
+  project_name: 'portfolio-new'
   # Use Github pages deploy process
   provider: pages
   # Keep builded pages
