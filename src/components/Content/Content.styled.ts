@@ -106,14 +106,15 @@ export const SBlock = styled.div<{
       &::before {
         content: '';
         position: absolute;
-        top: -50px;
-        bottom: -50px;
+        top: 0;
+        bottom: 0;
+        width: 50%;
         left: ${placement === 'right' ? 'auto' : '-16px'};
         right: ${placement === 'right' ? '-16px' : 'auto'};
-        width: 50%;
         background: url(${image}) no-repeat;
         background-position: ${placement === 'right' ? '100% 50%' : '0 50%'};
-        background-size: contain;
+        background-size: cover;
+        background-position: ${placement === 'right' ? 'left' : 'right'} center;
         opacity: 0.2;
       }
     `}
@@ -130,6 +131,7 @@ export const SBlock = styled.div<{
           bottom: -100px;
           left: ${placement === 'right' ? 'auto' : '-60px'};
           right: ${placement === 'right' ? '-60px' : 'auto'};
+          background-size: auto;
         }
       `}
   }
@@ -142,11 +144,11 @@ export const SBlock = styled.div<{
       image &&
       css`
         &::before {
-          top: -200px;
-          bottom: -200px;
-          left: ${placement === 'right' ? 'auto' : '-48px'};
-          right: ${placement === 'right' ? '-48px' : 'auto'};
-          background-size: auto;
+          top: -100px;
+          width: 700px;
+          height: 700px;
+          left: ${placement === 'right' ? 'auto' : '-350px'};
+          right: ${placement === 'right' ? '-350px' : 'auto'};
         }
       `}
   }
