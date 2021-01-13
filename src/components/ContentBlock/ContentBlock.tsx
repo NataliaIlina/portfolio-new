@@ -10,12 +10,7 @@ type TProps = {
   placement?: 'left' | 'right';
 };
 
-const ContentBlock: React.FC<TProps> = ({
-  title,
-  description,
-  image,
-  placement = 'left',
-}) => {
+const ContentBlock: React.FC<TProps> = ({ title, description, image, placement = 'left' }) => {
   const [withAnimation, showAnimation] = useState(false);
   const blockRef = useRef(null);
 
@@ -35,11 +30,7 @@ const ContentBlock: React.FC<TProps> = ({
     <SBlock ref={blockRef} image={image} placement={placement}>
       <Text.header3 textAlign="center">{title}</Text.header3>
 
-      <SDescription
-        textAlign="center"
-        withTopDecor
-        withAnimation={withAnimation}
-      >
+      <SDescription textAlign="center" withTopDecor withAnimation={withAnimation}>
         {description}
       </SDescription>
     </SBlock>

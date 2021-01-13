@@ -155,15 +155,15 @@ export const SBlock = styled.div<{
 export const SQuote = styled(Text.caption)`
   position: absolute;
   right: 0;
-  bottom: -12px;
+  bottom: -16px;
 
   ${({ theme }) => theme.media.up('md')} {
-    right: 88px;
-    bottom: -10px;
+    bottom: -28px;
   }
 
   ${({ theme }) => theme.media.up('md')} {
-    right: 88px;
-    bottom: -24px;
+    left: 50%;
+    bottom: -32px;
+    right: auto;
   }
 `;

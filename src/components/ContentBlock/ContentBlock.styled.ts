@@ -10,4 +10,9 @@ export const SDescription = styled(Text.body).withConfig<{
     css`
       animation: ${fadeOut} 2.5s ease-out;
     `}
+
+  ${({ theme }) => theme.media.up('md')} {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 `;
