@@ -69,6 +69,8 @@ const Content: React.FC = () => (
             <span>Примеры</span> <br /> работ
           </>
         }
+        buttonTitle="Смотреть код"
+        onClick={() => window.location.assign('https://github.com/NataliaIlina')}
       >
         <picture>
           <source srcSet="projects_mobile.png" media="(max-width: 767px)" />

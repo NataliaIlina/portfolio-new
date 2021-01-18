@@ -8,7 +8,7 @@ export const SDescription = styled(Text.body).withConfig<{
   ${({ withAnimation }) =>
     withAnimation &&
     css`
-      animation: ${fadeOut} 2.5s ease-out;
+      animation: ${fadeOut} 3s ease-out;
     `}
 
   ${({ theme }) => theme.media.up('md')} {

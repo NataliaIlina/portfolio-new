@@ -58,8 +58,7 @@ export const SFeatureContent = styled.div`
 `;
 
 export const SFeatureButton = styled(Button)`
-  ${({ theme }) => theme.media.up('sm')} {
-  }
+  margin-top: 24px;
 
   ${({ theme }) => theme.media.up('md')} {
     position: absolute;
